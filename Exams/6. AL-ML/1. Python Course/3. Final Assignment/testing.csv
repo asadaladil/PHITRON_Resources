@@ -1,0 +1,6 @@
+,EmployeeID,Name,Age,Gender,Department,ExperienceYears,Salary,WorkHoursPerWeek,PerformanceScore,JoinDate,Tshirt_size,ProjectCount,TrainingHours,DepartmentRating,SalaryPerHour
+46,147,Employee_47,57,Female,Marketing,1,137379.0,35,97,2018-04-26,L,2,32,1,981.2785714285715
+27,128,Employee_28,24,Male,Management,5,135981.0,35,98,2021-05-09,M,9,39,1,971.2928571428571
+31,132,Employee_32,30,Male,IT,1,135435.0,35,78,2014-12-29,L,8,5,4,967.3928571428571
+79,180,Employee_80,32,Female,IT,5,143691.0,38,85,2020-06-15,L,6,42,5,945.3355263157895
+80,181,Employee_81,38,Female,Marketing,7,146306.0,39,67,2021-05-01,S,7,26,5,937.8589743589744

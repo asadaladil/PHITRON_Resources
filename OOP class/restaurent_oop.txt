@@ -1,0 +1,28 @@
+ 
+1.inheritace
+2.encapsulation
+3.polymorphism
+4.abstraction
+-------------------------
+
+classes
+1.User : base class (ABC)
+2.Customer(User)
+3.Employee(User)
+4.Chef(Employee)
+5.Server(Emplyee)
+6.Manager(Employee)
+7.Cleaner(Employee)
+8.Supplier(Employee)
+9.Marketer(User)
+
+
+1. Fooditem(ABC)
+2.Pizza(Fooditem)
+3.Burger(Fooditem)
+4.Drinks(Fooditem)
+5.Juice(Fooditem)
+6.Salad(Fooditem)
+
+1.Order
+2.Restaurent

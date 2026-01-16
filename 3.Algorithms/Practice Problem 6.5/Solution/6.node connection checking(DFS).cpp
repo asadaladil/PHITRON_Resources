@@ -1,0 +1,38 @@
+#include<bits/stdc++.h>
+using namespace std;
+const int n=1000;
+int visited[n];
+int M[n][n],m=0;
+void DFS(int src)
+{
+    if(src==6){m=1;}
+    cout<<src<<" ";
+    visited[src]=1;
+    for(int i=0;i<n;i++)
+    {
+        if(M[src][i]==1&&visited[i]==0)
+        {
+            DFS(i);
+        }
+    }
+}
+int main()
+{
+    int n,e;
+    cout<<"How many nodes: ";
+    cin>>n;
+    cout<<"How many edges: ";
+    cin>>e;
+    for(int i=1;i<=e;i++)
+    {
+        int a,b;cin>>a>>b;
+        M[a][b]=1;
+        M[b][a]=1;
+    }
+    DFS(2);
+    cout<<endl;
+    m==1?cout<<"6 is found\n":cout<<"6 is not found\n";
+}
+
+
+
