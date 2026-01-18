@@ -1,3 +1,5 @@
+# 10. Deployment
+
 import gradio as gr
 import pandas as pd
 import pickle
@@ -9,11 +11,17 @@ with open("Medical_Charges_model.pkl", "rb") as f:
 
 # 2. logic interface
 def predict_charges(age,gender,weight,feet,inch,children,smoker,region,income):
-    h=(feet*12+inch)*(2.54/100) # inch to meter conversion
-    bmi=weight/(h**2)
     
     if income<0:
         return "Income Must be positive"
+    if weight<=0:
+        return "Weight Must be greater than 0"
+    if feet<=0:
+        return "Height must be geater than 0"
+    
+    h=(feet*12+inch)*(2.54/100) # inch to meter conversion
+    bmi=weight/(h**2)
+    
     
     if age<18:
         age_group='Child'
@@ -29,7 +37,7 @@ def predict_charges(age,gender,weight,feet,inch,children,smoker,region,income):
     ]
       )
     
-    prediction=np.exp(model.predict(input_df)[0])
+    prediction=model.predict(input_df)[0]
     
     return f"Predicted Medical Charges: {np.round(prediction)}"
 
@@ -48,8 +56,9 @@ inputs=[
 
 app=gr.Interface(
     fn=predict_charges,
-      inputs=inputs,
-        outputs="text", 
-        title="Medical Charges Predictor")
+    inputs=inputs,
+    outputs="text", 
+    title="Medical Charges Predictor"
+    )
 
 app.launch()
