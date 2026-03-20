@@ -1,0 +1,24 @@
+# import Libraries
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+from torch.utils.data import DataLoader, Dataset
+!pip install torchinfo
+from torchinfo import summary
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+!pip install ydata-profiling
+from ydata_profiling import ProfileReport
+!pip install mlflow
+import mlflow
+import mlflow.sklearn
+from scipy.stats import randint
+
+from sklearn.linear_model import Perceptron
+
+torch.manual_seed(42)
